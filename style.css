@@ -2,6 +2,7 @@
   --primary-color: #2563eb;
   --secondary-color: #4f46e5;
   --tertiary-color: #7c3aed;
+  --accent-color: #d946ef;
   --text-color: #1e293b;
   --bg-color: #f8fafc;
   --card-color: #ffffff;
@@ -82,6 +83,11 @@ body {
 
 .btn--tertiary {
   background-color: var(--tertiary-color);
+  color: white;
+}
+
+.btn--accent {
+  background-color: var(--accent-color);
   color: white;
 }
 
