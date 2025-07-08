@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const colorBtn = document.getElementById('colorBtn');
   const messageBtn = document.getElementById('messageBtn');
   const resetBtn = document.getElementById('resetBtn');
+  const newBtn = document.getElementById('newBtn');
 
   // Colores disponibles
   const colors = [
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   colorBtn.addEventListener('click', changeColor);
   messageBtn.addEventListener('click', toggleMessage);
   resetBtn.addEventListener('click', resetCard);
+  newBtn.addEventListener('click', newFunction);
 
   // Funciones
   function changeColor() {
@@ -56,5 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
       messageElement.classList.add('hidden');
       messageBtn.textContent = 'Mostrar mensaje';
     }
+  }
+
+  function newFunction() {
+    const cardTitle = document.querySelector('.card__title');
+    const originalText = cardTitle.textContent;
+    
+    cardTitle.textContent = '¡Nueva Función Activada!';
+    cardTitle.style.color = 'var(--accent-color)';
+    
+    setTimeout(() => {
+      cardTitle.textContent = originalText;
+      cardTitle.style.color = '';
+    }, 1500);
   }
 });
