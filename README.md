@@ -1,10 +1,10 @@
-echo "# Flujo DevOps con Git
+# Flujo DevOps con Git
 
 ## Estructura de ramas
-- main: Rama principal de producción
-- dev: Rama de desarrollo integrado
-- hotfix/*: Ramas para correcciones urgentes
-- feature/*: Ramas para nuevas funcionalidades
+- `main`: Rama de producción
+- `dev`: Rama de desarrollo
+- `hotfix/*`: Correcciones urgentes
+- `feature/*`: Nuevas funcionalidades
 
 ## Diagrama de flujo
 ```mermaid
@@ -13,5 +13,4 @@ graph TD;
     dev --> feature/nuevo-boton;
     dev --> feature/mejora-estilos;
     main --> hotfix/arreglo-urgente;
-    hotfix/arreglo-urgente --> dev;
-```" > README.md
+```
